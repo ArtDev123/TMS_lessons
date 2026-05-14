@@ -1,0 +1,8 @@
+{
+    "username": "admin",
+    "is_active": true,
+    "roles": [
+        "read",
+        "write"
+    ]
+}
