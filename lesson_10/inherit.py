@@ -11,7 +11,7 @@ class Cat(Animal):
         super().__init__(name)  # Вызов __init__ родителя
         self.color = color
 
-    def meow(self):
+    def meow(self) -> None:
         print(f"{self.color} кот {self.name} мяукает.")
 
 
