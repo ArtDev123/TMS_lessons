@@ -24,7 +24,6 @@ class Product:
         del self.__price
 
 
-# Демонстрация работы
 laptop = Product("Ноутбук", 1500)
 
 print(laptop.price)  # Отработает геттер
