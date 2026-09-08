@@ -6,6 +6,7 @@ from utils import timed
 
 START = 1
 END = 700_000
+
 PARTS = 4
 
 
@@ -73,13 +74,15 @@ def collect_primes(chunks: list[tuple[int, int]]) -> list[int]:
 if __name__ == "__main__":
     chunks = make_chunks(START, END, PARTS)
 
-    sequential_total = run_sequential()
-    threads_total = run_threads(chunks)
+    # sequential_total = run_sequential()
+    # threads_total = run_threads(chunks)
     processes_total = run_processes(chunks)
-    print(
-        f"Простых чисел: последовательно {sequential_total}, "
-        f"потоки {threads_total}, процессы {processes_total}"
-    )
+    # print(
+    #     f"Простых чисел: последовательно {sequential_total}, "
+    #     f"потоки {threads_total}, процессы {processes_total}"
+    # )
 
-    primes = collect_primes(chunks)
-    print(f"Собрали {len(primes)} простых, первые: {primes[:5]}, последние: {primes[-5:]}")
+    # primes = collect_primes(chunks)
+    # print(
+    #     f"Собрали {len(primes)} простых, первые: {primes[:5]}, последние: {primes[-5:]}"
+    # )

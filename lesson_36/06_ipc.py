@@ -1,8 +1,9 @@
 # Передаём данные между процессами: очередь задач (Queue) и ping/pong через Pipe.
 from multiprocessing import Pipe, Process, Queue
+from multiprocessing.connection import Connection
 
 
-def ping(conn) -> None:
+def ping(conn: Connection) -> None:
     # Один конец Pipe — у ребёнка. recv/send — как разговор по трубке.
     message = conn.recv()
     conn.send(f"pong: {message}")
